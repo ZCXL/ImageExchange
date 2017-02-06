@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iexchange.dao.ISampleDao">
+    <select id="select" resultType="com.iexchange.entity.Sample" parameterType="java.lang.String">
+        select userkey, value from sample where userkey=#{key, jdbcType=VARCHAR}
+    </select>
+    <insert id="insert" parameterType="com.iexchange.entity.Sample">
+        insert into sample(userkey, value) values('zhuchao', 'ffffff')
+    </insert>
+</mapper>
